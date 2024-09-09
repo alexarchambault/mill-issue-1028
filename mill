@@ -13,6 +13,8 @@
 
 set -e
 
+export COURSIER_CACHE="$(pwd)/coursier-cache"
+
 if [ -z "${DEFAULT_MILL_VERSION}" ] ; then
   DEFAULT_MILL_VERSION="0.11.4"
 fi
