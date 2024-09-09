@@ -2,4 +2,4 @@
 set -e
 
 ./clean.sh
-exec ./mill -i -j 16 -d show __.resolvedIvyDeps
+exec ./mill -i -j 16 -d __.resolvedIvyDeps
