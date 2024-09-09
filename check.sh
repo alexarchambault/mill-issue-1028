@@ -3,4 +3,5 @@ set -e
 
 ./clean.sh
 export COURSIER_CACHE="$(pwd)/coursier-cache"
-exec ./mill -i -j 16 -d __.resolvedIvyDeps
+exec "$HOME/projects/mill/out/dev/assembly.dest/mill" -i -j 16 -d __.resolvedIvyDeps
+# exec ./mill -i -j 16 -d __.resolvedIvyDeps
