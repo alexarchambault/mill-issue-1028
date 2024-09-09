@@ -57,6 +57,14 @@ if [ -z "${MILL_VERSION}" ] ; then
   fi
 fi
 
+case "$MILL_VERSION" in
+  *-SNAPSHOT)
+    exec "$HOME/.ivy2/local/com.lihaoyi/mill-dist/$MILL_VERSION/jars/mill-dist-assembly.jar" "$@"
+    ;;
+  *)
+    ;;
+esac
+
 MILL_USER_CACHE_DIR="${XDG_CACHE_HOME:-${HOME}/.cache}/mill"
 
 if [ -z "${MILL_DOWNLOAD_PATH}" ] ; then
